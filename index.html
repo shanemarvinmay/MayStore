@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll-demo</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>
+        $('body').bootstrapMaterialDesign();
+    </script>
+    <style>
+        .fixed-top {
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .nav-brand {
+            text-align: center;
+        }
+
+        .nav-right {
+            text-align: right;
+        }
+
+        .main-banner {
+            height: 100vh;
+
+        }
+
+        .product {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .product-image {
+            width: 33vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* .footer-container {
+            position: relative;
+        } */
+
+        footer {
+            height: 5vh;
+            width: 100vw;
+            /* position: absolute;
+            bottom: 0px;
+            left: 0px; */
+        }
+    </style>
+    <style>
+        .scroll-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            /* border: 2px solid var(--gs0); */
+            /* border-radius: 8px; */
+            height: 100vh;
+        }
+
+        .scroll-container div {
+            scroll-snap-align: start;
+            height: 100vh;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            /* font-size: 4rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav dark -->
+    <ul class="nav nav-tabs bg-dark fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <li class="nav-item"><a class="nav-link " href="#product">Shop</a></li>
+                </div>
+                <div class="col"></div>
+                <div class="col nav-brand">
+                    <li class="nav-item"><a class="nav-link active" href="#main-banner">May</a></li>
+                </div>
+                <div class="col"></div>
+                <div class="col nav-right">
+                    <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+    <div class="scroll-container ">
+        <div>
+
+            <!-- main banner  -->
+            <div id="main-banner" class="jumbotron jumbotron-fluid main-banner">
+                <div class="container">
+                    <h1 class="display-4">Welcome to May Store</h1>
+                    <p class="lead">Products here are simple and they work, nothing more.</p>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <!-- product  -->
+            <div id="product" class="container-fluid product">
+                <a href="./product.html"> <img src="webcam.png" class="rounded mx-auto d-block product-image"
+                        alt="product description"> </a>
+            </div>
+
+        </div>
+        <div id="footer" class="footer-container">
+            <footer class="page-footer font-small blue">
+                <div class="footer-copyright text-center py-3">
+                    <a href="mailto:shanemarvinmay@icloud.com?subject = may-store-message&body = 'concerned customer'">
+                        shanemarvinmay@icloud.com</a>
+                </div>
+            </footer>
+        </div>
+        <!--THESE ARE MORE SCROLL SECTIONS YOU CAN USE LATER<div>4 </div> -->
+    </div>
+    <!-- footer  -->
+
+</body>
+
+</html>
